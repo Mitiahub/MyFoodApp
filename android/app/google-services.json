@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "8499144123",
+    "project_id": "test-11714",
+    "storage_bucket": "test-11714.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8499144123:android:f315d6fd9084c78a57d09e",
+        "android_client_info": {
+          "package_name": "com.cook.cookapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbL05J7L4svnBWVM8dAQZRspoHiNbTPK0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
