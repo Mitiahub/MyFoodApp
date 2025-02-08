@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { View, Text, Alert, Platform } from 'react-native';
+import { View, Text, Alert, StyleSheet } from 'react-native';
 import * as Notifications from 'expo-notifications';
 import { getFCMToken } from '../../firebaseConfig';
 
@@ -64,9 +64,61 @@ export default function NotificationsScreen() {
   }, []);
 
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 }}>
-      <Text style={{ fontSize: 18, fontWeight: 'bold' }}>📲 Notifications Push</Text>
-      <Text style={{ marginTop: 10, color: '#555' }}>Expo Token: {expoPushToken || 'En attente...'}</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>📲 Notifications Push</Text>
+      <Text style={styles.subtitle}>Recevez les dernières mises à jour en temps réel.</Text>
+      
+      <View style={styles.tokenContainer}>
+        <Text style={styles.tokenLabel}>Expo Token :</Text>
+        <Text style={styles.tokenText}>{expoPushToken || '🔄 En attente...'}</Text>
+      </View>
     </View>
   );
 }
+
+// ✅ Ajout des styles premium UI/UX
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff5e1', // 🍽️ Fond plus doux
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  title: {
+    fontSize: 26,
+    fontWeight: 'bold',
+    color: '#FF5733',
+    textAlign: 'center',
+  },
+  subtitle: {
+    fontSize: 16,
+    color: '#666',
+    marginTop: 10,
+    textAlign: 'center',
+    paddingHorizontal: 15,
+  },
+  tokenContainer: {
+    backgroundColor: '#fff',
+    padding: 15,
+    marginTop: 15,
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    elevation: 3,
+    width: '90%',
+    alignItems: 'center',
+  },
+  tokenLabel: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: '#8b4513',
+  },
+  tokenText: {
+    fontSize: 14,
+    color: '#333',
+    marginTop: 5,
+    textAlign: 'center',
+  },
+});
