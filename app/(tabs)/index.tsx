@@ -33,7 +33,7 @@ export default function AccueilScreen() {
         Bonjour {username ? username : 'utilisateur'}, prêt à commander ?
       </Text>
 
-      <ActivityIndicator size="large" color="#FF5733" style={{ marginTop: 20 }} />
+
     </View>
   );
 }

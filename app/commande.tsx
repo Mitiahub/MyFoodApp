@@ -50,7 +50,6 @@ export default function WelcomeScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Bienvenue dans MyFoodApp 🍽</Text>
       <Text style={styles.subtitle}>Découvrez nos plats délicieux et commandez en quelques clics.</Text>
 
       {loading ? (
