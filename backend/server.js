@@ -18,7 +18,6 @@ const pool = new Pool({
 // ✅ Activer CORS pour autoriser les requêtes depuis React Native
 app.use(cors({ origin: '*' }));
 app.use(express.json());
-app.use('/images', express.static(path.join(__dirname, 'public/images')));
 // ✅ Route pour récupérer les recettes
 app.get('/api/recettes', async (req, res) => {
   try {
